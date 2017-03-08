@@ -1,8 +1,47 @@
-body {
+body, html {
   margin: 0;
+  height: 100%;
   font-family: 'Montserrat', sans-serif;
 }
+.contenedor {
+  overflow: hidden;
+  height: 100%;
+}
 
-.text {
-  font-size: 18px;
+.contenedor:hover {
+  border: 5px solid red;
+}
+
+.imagen {
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  height: 100%;
+  transition: transform 0,5s;
+}
+
+.imagen:hover {
+  transform: scale(1.4);
+}
+
+.texto {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: rotate(-360deg);
+  transition: all 1s;
+}
+
+.texto:hover {
+  transform: rotate(0deg);
+  opacity: 100;
+}
+
+.titulos {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 280px;
+  background: rgba(255, 0, 0, 0.5);
+  padding: 10px;
+  border: 1px solid red;
 }
